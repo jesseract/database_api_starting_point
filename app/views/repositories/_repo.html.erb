@@ -12,13 +12,7 @@
       <%= repo.number_of_forks %>
     </a>
   </div>
-
   <h3>
-    <%= link_to repo.name, repo.url %>
-  </h3>
-
-  <p>
-    Updated <%= distance_of_time_in_words_to_now(repo.updated_at) %> ago
-  </p>
-
+   <%= link_to repo.name, repo.repo_url %>
+ </h3>
 </div>

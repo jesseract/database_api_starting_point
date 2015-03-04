@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304205851) do
+ActiveRecord::Schema.define(version: 20150304221126) do
 
   create_table "profiles", force: :cascade do |t|
     t.string   "username"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 20150304205851) do
     t.string   "number_following"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "body"
+  end
+
+  create_table "repositories", force: :cascade do |t|
+    t.text     "body"
+    t.string   "name"
+    t.string   "repo_url"
+    t.integer  "number_of_forks"
+    t.integer  "number_of_stars"
+    t.datetime "last_modified_at"
+    t.string   "language"
+    t.integer  "profile_id"
   end
 
 end
